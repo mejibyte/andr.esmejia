@@ -84,3 +84,15 @@ body {
     background: url(/images/button-contact.png) no-repeat left center; }
   #header #tab-contact a:active {
     background: url(/images/button-contact.png) no-repeat left bottom; }
+
+#brief-description {
+  text-indent: -9999em;
+  background: url(/images/brief-description.png) no-repeat;
+  height: 218px;
+  width: 942px;
+  margin-left: 8px; }
+  #brief-description img {
+    margin-left: 710px;
+    margin-top: 11px;
+    height: 153px;
+    width: 200px; }
