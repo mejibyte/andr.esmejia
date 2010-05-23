@@ -1,0 +1,83 @@
+#header {
+  height: 220px;
+  background-image: url(/images/flag.png);
+
+  h1 {
+    width: 380px;
+    margin-left: 10px;   
+    float: left; 
+    a {
+      text-indent: -9999em;
+      display: block;
+      background: transparent;
+    }
+  }
+
+  ul#navigation {
+    display: block;
+    background: transparent;
+    float: right;
+    margin-right: 20px;
+
+    li {
+      float: left;
+      margin: {
+        left: 10px;
+        top: 87px;
+      }
+      a {
+        display: block;
+        text-indent: -9999em;
+      }
+    }
+
+    #tab-home {
+      a {
+        background: url(/images/button-home.png) no-repeat left top;
+        height: 32px;
+        width: 72px;
+      }
+
+      a:hover {
+        background: url(/images/button-home.png) no-repeat left center;        
+      }
+
+      a:active {
+        background: url(/images/button-home.png) no-repeat left bottom;
+      }
+    }
+  }
+
+  #tab-blog {
+    a {
+      background: url(/images/button-blog.png) no-repeat left top;
+      height: 32px;
+      width: 72px;
+    }
+
+    a:hover {
+      background: url(/images/button-blog.png) no-repeat left center;        
+    }
+
+    a:active {
+      background: url(/images/button-blog.png) no-repeat left bottom;
+    }
+  }
+
+
+  #tab-contact {
+    a {
+      background: url(/images/button-contact.png) no-repeat left top;
+      height: 32px;
+      width: 72px;
+    }
+
+    a:hover {
+      background: url(/images/button-contact.png) no-repeat left center;        
+    }
+
+    a:active {
+      background: url(/images/button-contact.png) no-repeat left bottom;
+    }
+  }
+}

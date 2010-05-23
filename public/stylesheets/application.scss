@@ -1,0 +1,10 @@
+@import "reset";
+
+body {
+  width: 960px;
+  background-image: url(/images/background.png);
+  margin: auto;
+}
+
+
+@import "header";
