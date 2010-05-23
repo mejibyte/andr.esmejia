@@ -3,12 +3,50 @@
   background: url(/images/brief-description.png) no-repeat;
   height: 218px;
   width: 942px;
-  margin-left: 8px;
+  margin: {
+    left: 8px;
+    top: 20px;
+  }  
+  
+  h1 {
+    float: left;
+    width: 710px;
+    height: 218px;
+    display: block;
+  }
   
   img {
-    margin-left: 710px;
-    margin-top: 11px;
+    float: right;
+    margin-top: 30px;
+    margin-right: 32px;
     height: 153px;
     width: 200px;
+  }
+}
+
+#detailed-description {
+  clear: both;
+  background: url(/images/detailed-description.png) no-repeat;
+  width: 802px;
+  height: 297px;
+  margin: {
+    top: 40px;
+    left: 80px;
+  }
+  
+  div {
+    float: left;
+    background: transparent;
+    width: 244px;
+    margin: {
+      left: 17px;
+      top: 14px;
+    }
+    
+    h1 {
+      text-indent: -9999em;
+      margin-bottom: 10px;
+      background-color: transparent;
+    }
   }
 }

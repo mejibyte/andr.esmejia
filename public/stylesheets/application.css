@@ -35,7 +35,9 @@ a {
 body {
   width: 960px;
   background-image: url(/images/background.png);
-  margin: auto; }
+  margin: auto;
+  font-size: 15px;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 #header {
   height: 220px;
@@ -47,7 +49,8 @@ body {
     #header h1 a {
       text-indent: -9999em;
       display: block;
-      background: transparent; }
+      background: transparent;
+      height: 220px; }
   #header ul#navigation {
     display: block;
     background: transparent;
@@ -90,9 +93,34 @@ body {
   background: url(/images/brief-description.png) no-repeat;
   height: 218px;
   width: 942px;
-  margin-left: 8px; }
+  margin-left: 8px;
+  margin-top: 20px; }
+  #brief-description h1 {
+    float: left;
+    width: 710px;
+    height: 218px;
+    display: block; }
   #brief-description img {
-    margin-left: 710px;
-    margin-top: 11px;
+    float: right;
+    margin-top: 30px;
+    margin-right: 32px;
     height: 153px;
     width: 200px; }
+
+#detailed-description {
+  clear: both;
+  background: url(/images/detailed-description.png) no-repeat;
+  width: 802px;
+  height: 297px;
+  margin-top: 40px;
+  margin-left: 80px; }
+  #detailed-description div {
+    float: left;
+    background: transparent;
+    width: 244px;
+    margin-left: 17px;
+    margin-top: 14px; }
+    #detailed-description div h1 {
+      text-indent: -9999em;
+      margin-bottom: 10px;
+      background-color: transparent; }
