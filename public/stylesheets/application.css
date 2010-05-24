@@ -124,3 +124,28 @@ body {
       text-indent: -9999em;
       margin-bottom: 10px;
       background-color: transparent; }
+
+#footer {
+  height: 357px;
+  width: 962px;
+  background: url(/images/footer.png);
+  margin-top: 40px; }
+  #footer #latest-tweets, #footer #latest-posts {
+    float: left;
+    width: 460px;
+    height: 280px;
+    padding-left: 20px;
+    padding-top: 20px; }
+    #footer #latest-tweets h1, #footer #latest-posts h1 {
+      text-indent: -9999em;
+      height: 30px;
+      display: block; }
+  #footer #open-source {
+    clear: both;
+    margin-left: 80px;
+    padding-left: 10px;
+    padding-top: 5px;
+    line-height: 44px;
+    font-size: 18px;
+    width: 230px;
+    text-align: center; }
