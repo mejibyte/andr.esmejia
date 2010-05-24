@@ -1,7 +1,7 @@
 <div id="footer">
   <div id="latest-tweets">
     <h1>Latest tweets</h1>
-    Obladi, Oblada.
+    <%= render :partial => "shared/latest_tweets", :locals =>{ :tweets => Twitter::Search.new.from("andmej").fetch(5).results } %>
   </div>
 
   <div id="latest-posts">
