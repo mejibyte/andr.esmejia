@@ -3,6 +3,7 @@
   width: 962px;
   background: url(/images/footer.png);
   margin-top: 40px;
+  color: #d3cddc;
   
   #latest-tweets, #latest-posts {
     float: left;
@@ -10,13 +11,23 @@
     height: 280px;
     padding-left: 20px;
     padding-top: 20px;
+    line-height: 1.3em;
     
     h1 {
       text-indent: -9999em;
       height: 30px;
       display: block;
     }
+    
+    a {
+      color: #d98de2;
+    }
+    
+    .tweet {
+      padding-top: 18px;
+    }
   }
+
   
   #open-source {
     clear: both;
