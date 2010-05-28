@@ -23,8 +23,12 @@
       color: #d98de2;
     }
     
-    .tweet {
-      padding-top: 18px;
+    .tweet, .post {
+      padding: {
+        top: 18px;
+        left: 10px;
+        right: 10px;
+      }
     }
   }
 

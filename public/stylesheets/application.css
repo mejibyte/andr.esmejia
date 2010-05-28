@@ -144,8 +144,10 @@ body {
       display: block; }
     #footer #latest-tweets a, #footer #latest-posts a {
       color: #d98de2; }
-    #footer #latest-tweets .tweet, #footer #latest-posts .tweet {
-      padding-top: 18px; }
+    #footer #latest-tweets .tweet, #footer #latest-tweets .post, #footer #latest-posts .tweet, #footer #latest-posts .post {
+      padding-top: 18px;
+      padding-left: 10px;
+      padding-right: 10px; }
   #footer #open-source {
     clear: both;
     margin-left: 80px;

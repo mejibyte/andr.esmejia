@@ -1,12 +1,12 @@
 <div id="footer">
   <div id="latest-tweets">
     <h1>Latest tweets</h1>
-    <%= render :partial => "shared/latest_tweets", :locals =>{ :tweets => Twitter::Search.new.from("andmej").fetch.results } %>
+    <%= render :partial => "shared/latest_tweets", :locals => { :tweets => Twitter::Search.new.from("andmej").fetch.results } %>
   </div>
 
   <div id="latest-posts">
     <h1>Latest posts</h1>
-    Obladi, Oblada.    
+    <%= render :partial => "shared/latest_posts" %> 
   </div>
   
   <div id="open-source">

@@ -1,0 +1,10 @@
+<% Post.recent.each do |post| %>
+<div class="post">
+  <div class="text">
+    <%= post.title %>
+  </div>
+  <div class="date">
+      <%= link_to "#{time_ago_in_words post.created_at} ago", post_path(post) %>
+  </div>
+</div>
+<% end %>
