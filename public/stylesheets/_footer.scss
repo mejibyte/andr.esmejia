@@ -5,6 +5,10 @@
   margin-top: 40px;
   color: #d3cddc;
   
+  a {
+    color: #d98de2;
+  }
+  
   #latest-tweets, #latest-posts {
     float: left;
     width: 460px;
@@ -42,5 +46,8 @@
     font-size: 18px;
     width: 230px;
     text-align: center;
+    a {
+      color: #551A8B;
+    }
   }
 }

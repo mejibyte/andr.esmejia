@@ -1,0 +1,22 @@
+<% @posts.each do |post| %>
+<div class="post">
+  <div class="header">
+    <div class="title">
+      <%= post.title %>
+    </div>
+    <div class="date">
+      <%= format_date post.created_at %>
+    </div>
+    <%= clear %>
+  </div>
+  <%= clear %>
+  <div class="body">
+    <%= post.body %>  
+  </div>
+  <div class="footer">
+    <div class="comments">
+      3 comments
+    </div>
+  </div>
+</div>
+<% end %>

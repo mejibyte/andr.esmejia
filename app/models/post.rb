@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
   validates_presence_of :title, :body
-  named_scope :recent, :order => "created_at DESC", :limit => 3 
+  default_scope :order => "created_at DESC"
+  named_scope :recent, :limit => 3 
 end

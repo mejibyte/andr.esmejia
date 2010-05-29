@@ -8,7 +8,12 @@ body {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;    
 }
 
+.clear {
+  clear: both;
+}
+
 
 @import "header";
 @import "home";
+@import "posts";
 @import "footer";

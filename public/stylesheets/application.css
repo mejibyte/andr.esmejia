@@ -39,6 +39,9 @@ body {
   font-size: 15px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
+.clear {
+  clear: both; }
+
 #header {
   height: 220px;
   background-image: url(/images/flag.png); }
@@ -125,12 +128,57 @@ body {
       margin-bottom: 10px;
       background-color: transparent; }
 
+#container .post {
+  width: 802px;
+  margin: 0 auto 20px; }
+  #container .post .header {
+    min-height: 98px;
+    background: url(/images/post-header.png) no-repeat;
+    font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+    #container .post .header .title {
+      float: left;
+      width: 670px;
+      padding-top: 20px;
+      padding-left: 20px;
+      margin-top: 10px;
+      font-size: 32px;
+      color: #553687;
+      line-height: 1.3em; }
+    #container .post .header .date {
+      float: right;
+      width: 80px;
+      margin-right: 31px;
+      margin-top: 6px;
+      text-align: center;
+      font-size: 36px;
+      color: #d0c9d9;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8); }
+  #container .post .body {
+    background: url(/images/post-background.png) repeat-y;
+    padding: 10px 30px 20px;
+    line-height: 1.5em;
+    font-size: 1.1em; }
+  #container .post .footer {
+    height: 47px;
+    background: url(/images/post-footer.png) no-repeat; }
+    #container .post .footer .comments {
+      margin-left: 43px;
+      line-height: 32px;
+      padding-top: 7px;
+      width: 158px;
+      text-align: center;
+      color: #b074bf;
+      font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-size: 18px; }
+
 #footer {
   height: 357px;
   width: 962px;
   background: url(/images/footer.png);
   margin-top: 40px;
   color: #d3cddc; }
+  #footer a {
+    color: #d98de2; }
   #footer #latest-tweets, #footer #latest-posts {
     float: left;
     width: 460px;
@@ -157,3 +205,5 @@ body {
     font-size: 18px;
     width: 230px;
     text-align: center; }
+    #footer #open-source a {
+      color: #551A8B; }
