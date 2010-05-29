@@ -72,7 +72,7 @@ body {
       width: 72px; }
     #header ul#navigation #tab-home a:hover {
       background: url(/images/button-home.png) no-repeat left center; }
-    #header ul#navigation #tab-home a:active {
+    #header ul#navigation #tab-home a:active, #header ul#navigation #tab-home a.pressed {
       background: url(/images/button-home.png) no-repeat left bottom; }
   #header #tab-blog a {
     background: url(/images/button-blog.png) no-repeat left top;
@@ -80,7 +80,7 @@ body {
     width: 72px; }
   #header #tab-blog a:hover {
     background: url(/images/button-blog.png) no-repeat left center; }
-  #header #tab-blog a:active {
+  #header #tab-blog a:active, #header #tab-blog a.pressed {
     background: url(/images/button-blog.png) no-repeat left bottom; }
   #header #tab-contact a {
     background: url(/images/button-contact.png) no-repeat left top;
@@ -88,7 +88,7 @@ body {
     width: 72px; }
   #header #tab-contact a:hover {
     background: url(/images/button-contact.png) no-repeat left center; }
-  #header #tab-contact a:active {
+  #header #tab-contact a:active, #header #tab-contact a.pressed {
     background: url(/images/button-contact.png) no-repeat left bottom; }
 
 #brief-description {

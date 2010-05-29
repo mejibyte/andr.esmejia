@@ -43,7 +43,7 @@
         background: url(/images/button-home.png) no-repeat left center;        
       }
 
-      a:active {
+      a:active, a.pressed {
         background: url(/images/button-home.png) no-repeat left bottom;
       }
     }
@@ -60,7 +60,7 @@
       background: url(/images/button-blog.png) no-repeat left center;        
     }
 
-    a:active {
+    a:active, a.pressed {
       background: url(/images/button-blog.png) no-repeat left bottom;
     }
   }
@@ -77,7 +77,7 @@
       background: url(/images/button-contact.png) no-repeat left center;        
     }
 
-    a:active {
+    a:active, a.pressed {
       background: url(/images/button-contact.png) no-repeat left bottom;
     }
   }

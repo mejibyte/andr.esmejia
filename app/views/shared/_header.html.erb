@@ -4,14 +4,8 @@
   </h1>
   
   <ul id="navigation">
-		<li id="tab-home">
-      <%= link_to "Home", root_path %>
-		</li>
-		<li id="tab-blog">
-      <%= link_to "Blog", "#" %>
-		</li>				
-		<li id="tab-contact">
-      <%= link_to "Contact", "#" %>
-		</li>
+    <%= button :text => "Home", :id => "tab-home", :url => root_path, :pressed => (controller.is_a?(StaticPagesController) && params[:action] == "home") %>
+    <%= button :text => "Blog", :id => "tab-blog", :url => posts_path, :pressed => controller.is_a?(PostsController) %>
+    <%= button :text => "Contact", :id => "tab-contact", :url => "#", :pressed => false %>
 	</ul>
 </div>
