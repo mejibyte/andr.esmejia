@@ -4,10 +4,12 @@
   <head>
     <title><%= h(yield(:title) || "Andrés Mejía - Fantastic Ruby on Rails developer") %></title>
     <%= stylesheet_link_tag 'application' %>
+    <%= stylesheet_link_tag 'prettify' %>
     <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Droid+Sans:bold' %>
+    <%= javascript_include_tag "prettify/prettify" %>
     <%= yield(:head) %>
   </head>
-  <body>
+  <body onload="prettyPrint()">
     <%= render :partial => "shared/header" %>
     
     

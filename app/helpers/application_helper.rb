@@ -6,6 +6,12 @@ module ApplicationHelper
     end
   end
   
+  def textile_to_html(textile)
+     cloth = RedCloth.new(textile)
+     cloth.extend PurpleCloth
+     cloth.to_html
+  end
+  
   def clear
     "<div class='clear'></div>"
   end

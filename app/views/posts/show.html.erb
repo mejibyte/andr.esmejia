@@ -1,24 +1,20 @@
-<% @posts.each do |post| %>
 <div class="post">
   <div class="header">
     <div class="title">
-      <%= post.title %>
+      <%= @post.title %>
     </div>
     <div class="date">
-      <%= format_date post.created_at %>
+      <%= format_date @post.created_at %>
     </div>
     <%= clear %>
   </div>
   <%= clear %>
   <div class="body">
-    <%= textile_to_html post.body %>  
+    <%= textile_to_html @post.body %>  
   </div>
   <div class="footer">
     <div class="comments">
-      <%= pluralize post.comments.count, "comment" %>
+      <%= pluralize @post.comments.count, "comment" %>
     </div>
   </div>
-  
-  <%= link_to "Edit", edit_post_path(post) %>
 </div>
-<% end %>
