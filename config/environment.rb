@@ -22,6 +22,8 @@ Rails::Initializer.run do |config|
   config.gem "twitter"
   config.gem "RedCloth"
   config.gem "coderay"
+  config.gem "augustl-redclothcoderay", :source => "http://gems.github.com/", :lib => "redclothcoderay"
+  
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

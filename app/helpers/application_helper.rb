@@ -7,8 +7,9 @@ module ApplicationHelper
   end
   
   def textile_to_html(textile)
+     RedclothCoderay.coderay_options :line_numbers => :table
      cloth = RedCloth.new(textile)
-     cloth.extend PurpleCloth
+     #cloth.extend PurpleCloth
      cloth.to_html
   end
   
