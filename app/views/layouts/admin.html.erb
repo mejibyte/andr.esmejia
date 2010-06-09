@@ -9,7 +9,9 @@
 
 <body>
   <ul>
+    <li><%= link_to "Blog home page", posts_path %></li>
     <li><%= link_to "Posts", admin_posts_path %></li>
+    <li><%= link_to "Uploads", admin_uploads_path %></li>    
     <li><%= link_to "Logout", user_session_path, :method => :delete %></li>
   </ul>
   
