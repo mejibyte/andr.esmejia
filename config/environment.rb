@@ -23,6 +23,7 @@ Rails::Initializer.run do |config|
   config.gem "RedCloth"
   config.gem "coderay"
   config.gem "augustl-redclothcoderay", :source => "http://gems.github.com/", :lib => "redclothcoderay"
+  config.gem "authlogic"
   
 
   # Only load the plugins named here, in the order given (default is alphabetical).

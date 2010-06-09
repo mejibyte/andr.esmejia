@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :require_admin, :except => [:index, :show]
+  before_filter :require_user, :except => [:index, :show]
   
   def index
     @posts = Post.all
