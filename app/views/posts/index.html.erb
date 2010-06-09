@@ -18,7 +18,8 @@
       <%= pluralize post.comments.count, "comment" %>
     </div>
   </div>
-  
-  <%= link_to "Edit", edit_post_path(post) %>
+  <% if logged_in? %>
+  <%= link_to "Edit", edit_admin_post_path(post) %>
+  <% end %>
 </div>
 <% end %>
