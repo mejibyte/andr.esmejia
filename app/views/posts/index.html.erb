@@ -2,7 +2,7 @@
 <div class="post">
   <div class="header">
     <div class="title">
-      <%= post.title %>
+      <%= link_to post.title, post %>
     </div>
     <div class="date">
       <%= format_date post.created_at %>
@@ -15,7 +15,7 @@
   </div>
   <div class="footer">
     <div class="comments">
-      <%= pluralize post.comments.count, "comment" %>
+      <%= link_to pluralize(post.comments.count, "comment"), post_path(post, :anchor => "comments") %>
     </div>
   </div>
   <% if logged_in? %>

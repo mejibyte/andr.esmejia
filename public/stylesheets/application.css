@@ -42,6 +42,9 @@ body {
 .clear {
   clear: both; }
 
+.hide {
+  display: none; }
+
 #header {
   height: 220px;
   background-image: url(/images/flag.png); }
@@ -113,6 +116,7 @@ body {
 #detailed-description {
   clear: both;
   background: url(/images/detailed-description.png) no-repeat;
+  color: #352a45;
   width: 802px;
   height: 297px;
   margin-top: 40px;
@@ -128,14 +132,14 @@ body {
       margin-bottom: 25px;
       background-color: transparent; }
 
-#container .post {
+#container .post, #container .single-post {
   width: 802px;
   margin: 0 auto 20px; }
-  #container .post .header {
+  #container .post .header, #container .single-post .header {
     min-height: 98px;
     background: url(/images/post-header.png) no-repeat;
     font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
-    #container .post .header .title {
+    #container .post .header .title, #container .single-post .header .title {
       float: left;
       width: 670px;
       padding-top: 20px;
@@ -144,7 +148,12 @@ body {
       font-size: 32px;
       color: #553687;
       line-height: 1.3em; }
-    #container .post .header .date {
+      #container .post .header .title a, #container .single-post .header .title a {
+        color: #553687;
+        text-decoration: none; }
+      #container .post .header .title a:hover, #container .single-post .header .title a:hover {
+        border-bottom: 1px dotted #553687; }
+    #container .post .header .date, #container .single-post .header .date {
       float: right;
       width: 80px;
       margin-right: 31px;
@@ -153,23 +162,75 @@ body {
       font-size: 36px;
       color: #d0c9d9;
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8); }
-  #container .post .body {
+  #container .post .body, #container .single-post .body {
     background: url(/images/post-background.png) repeat-y;
     padding: 10px 30px 20px;
     line-height: 1.5em;
-    font-size: 1.1em; }
-  #container .post .footer {
-    height: 47px;
-    background: url(/images/post-footer.png) no-repeat; }
-    #container .post .footer .comments {
-      margin-left: 43px;
-      line-height: 32px;
-      padding-top: 7px;
-      width: 158px;
-      text-align: center;
+    font-size: 1.1em;
+    color: #352a45; }
+    #container .post .body strong, #container .single-post .body strong {
+      font-weight: bold; }
+    #container .post .body p, #container .post .body img, #container .single-post .body p, #container .single-post .body img {
+      padding: 10px; }
+    #container .post .body img, #container .single-post .body img {
+      display: block;
+      margin: auto; }
+    #container .post .body a, #container .single-post .body a {
+      text-decoration: none;
+      border-bottom: 1px dotted #553687;
+      color: #733687; }
+    #container .post .body a:hover, #container .single-post .body a:hover {
+      background-color: #bbb3c7; }
+
+#container .post .footer {
+  height: 47px;
+  background: url(/images/post-footer.png) no-repeat; }
+  #container .post .footer .comments {
+    margin-left: 43px;
+    line-height: 32px;
+    padding-top: 7px;
+    width: 158px;
+    text-align: center;
+    font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 18px; }
+    #container .post .footer .comments a {
+      text-decoration: none;
       color: #b074bf;
+      padding: 0 4px;
+      border-bottom: 1px dotted #b074bf; }
+    #container .post .footer .comments a:hover {
+      background-color: #564570; }
+
+#container .single-post .footer {
+  min-height: 47px;
+  background: url(/images/post-comments-header.png) no-repeat; }
+#container .single-post .comments-count {
+  margin-left: 635px;
+  line-height: 32px;
+  padding-top: 12px;
+  color: #553687;
+  font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 18px; }
+#container .single-post .comments {
+  background: url(/images/comments.png) repeat-y;
+  width: 780px;
+  margin: auto; }
+  #container .single-post .comments .comment, #container .single-post .comments .author, #container .single-post .comments .date, #container .single-post .comments .body {
+    background: transparent; }
+  #container .single-post .comments .comment {
+    margin-left: 30px; }
+    #container .single-post .comments .comment .author, #container .single-post .comments .comment .date, #container .single-post .comments .comment .author a {
       font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-      font-size: 18px; }
+      color: #553687; }
+    #container .single-post .comments .comment .author, #container .single-post .comments .comment .author a {
+      font-weight: bold;
+      font-size: 20px;
+      padding-top: 5px; }
+#container .single-post .comments-footer {
+  height: 14px;
+  background: url(/images/comments-footer.png) no-repeat;
+  width: 780px;
+  margin: auto; }
 
 #footer {
   height: 357px;

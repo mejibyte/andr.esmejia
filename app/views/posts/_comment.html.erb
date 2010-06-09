@@ -1,0 +1,15 @@
+<div class="comment">
+  <div class="author">
+    <% if comment.url.blank? %>
+      <%= comment.name %>
+    <% else %>
+      <%= link_to comment.name, comment.url, :rel => "nofollow" %>
+    <% end %>
+  </div>
+  <div class="date">
+    <%= time_ago_in_words comment.created_at %> ago
+  </div>
+  <div class="body">
+    <%=h comment.body %>
+  </div>
+</div>

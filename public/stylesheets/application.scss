@@ -1,18 +1,5 @@
 @import "reset";
-
-body {
-  width: 960px;
-  background-image: url(/images/background.png);
-  margin: auto;
-  font-size: 15px;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;    
-}
-
-.clear {
-  clear: both;
-}
-
-
+@import "shared";
 @import "header";
 @import "home";
 @import "posts";

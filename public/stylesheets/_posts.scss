@@ -1,54 +1,140 @@
-#container .post {
+#container .post, #container .single-post {
   width: 802px;
   margin: 0 auto 20px;
- .header {
-   min-height: 98px;
-   background: url(/images/post-header.png) no-repeat;
-   font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", "Arial", sans-serif;   
-   
-   .title {
-     float: left;
-     width: 670px;
-     padding-top: 20px;
-     padding-left: 20px;
-     margin-top: 10px;
-     font-size: 32px;
-     color: #553687;
-     line-height: 1.3em;
-   }
-   
-   .date {
-     float: right;
-     width: 80px;
-     margin-right: 31px;
-     margin-top: 6px;
-     text-align: center;
-     font-size: 36px;
-     color: #d0c9d9;
-     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
-   }
- } 
- 
- .body {
-   background: url(/images/post-background.png) repeat-y;
-   padding: 10px 30px 20px;
-   line-height: 1.5em;
-   font-size: 1.1em;
- }
- 
- .footer {
-   height: 47px;
-   background: url(/images/post-footer.png) no-repeat;
-   
-   .comments {
-     margin-left: 43px;
-     line-height: 32px;
-     padding-top: 7px;
-     width: 158px;
-     text-align: center;
-     color: #b074bf;
-     font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-     font-size: 18px;
-   }
- }
+  .header {
+    min-height: 98px;
+    background: url(/images/post-header.png) no-repeat;
+    font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", "Arial", sans-serif;   
+
+    .title {
+      float: left;
+      width: 670px;
+      padding-top: 20px;
+      padding-left: 20px;
+      margin-top: 10px;
+      font-size: 32px;
+      color: #553687;
+      a { 
+        color: #553687;
+        text-decoration: none;
+      }
+      a:hover {
+        border-bottom:1px dotted #553687;  
+      }
+      line-height: 1.3em;
+    }
+
+    .date {
+      float: right;
+      width: 80px;
+      margin-right: 31px;
+      margin-top: 6px;
+      text-align: center;
+      font-size: 36px;
+      color: #d0c9d9;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+    }
+  } 
+
+  .body {
+    background: url(/images/post-background.png) repeat-y;
+    padding: 10px 30px 20px;
+    line-height: 1.5em;
+    font-size: 1.1em;
+    color: #352a45;
+
+    strong {
+      font-weight: bold;
+    }
+
+    p, img {
+      padding: 10px;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+    }
+
+    a {
+      text-decoration: none;
+      border-bottom:1px dotted #553687;
+      color: #733687;
+    }
+
+    a:hover {
+      background-color: #bbb3c7;
+    }
+  }
+}
+
+#container .post { 
+  .footer {
+    height: 47px;
+    background: url(/images/post-footer.png) no-repeat;
+
+    .comments {
+      margin-left: 43px;
+      line-height: 32px;
+      padding-top: 7px;
+      width: 158px;
+      text-align: center;
+      a {
+        text-decoration: none;
+        color: #b074bf;
+        padding: 0 4px;        
+        border-bottom:1px dotted #b074bf;        
+      }
+      a:hover {
+        background-color: #564570;      
+      }
+      font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-size: 18px;
+    }
+  }
+}
+
+#container .single-post {
+  .footer {
+    min-height: 47px;
+    background: url(/images/post-comments-header.png) no-repeat;
+  }
+  .comments-count {
+    margin-left: 635px;
+    line-height: 32px;
+    padding-top: 12px;
+    color: #553687;
+    font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 18px;
+  }
+  
+  .comments {
+    background: url(/images/comments.png) repeat-y;
+    width: 780px;
+    margin: auto;
+    
+    .comment, .author, .date, .body {
+      background: transparent;
+    }
+    
+    .comment {
+      margin-left: 30px;
+      .author, .date, .author a {
+        font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        color: #553687;
+      }
+      .author, .author a {
+        font-weight: bold;
+        font-size: 20px;
+        padding-top: 5px;
+      }
+    }
+  }
+  
+  .comments-footer {
+    height: 14px;
+    background: url(/images/comments-footer.png) no-repeat;
+    width: 780px;
+    margin: auto;
+  }
 }

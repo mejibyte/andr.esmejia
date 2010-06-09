@@ -1,4 +1,4 @@
-<div class="post">
+<div class="single-post">
   <div class="header">
     <div class="title">
       <%= @post.title %>
@@ -13,8 +13,14 @@
     <%= textile_to_html @post.body %>  
   </div>
   <div class="footer">
-    <div class="comments">
+    <a name="comments"></a>
+    <div class="comments-count">
       <%= pluralize @post.comments.count, "comment" %>
+    </div>
+    <div class="comments">
+      <%= render :partial => "comment", :collection => @post.comments %>
+    </div>
+    <div class="comments-footer">
     </div>
   </div>
 </div>
