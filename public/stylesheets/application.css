@@ -137,7 +137,7 @@ body {
   #detailed-description #feedback blockquote:before, #detailed-description #feedback blockquote:after {
     color: #533683;
     display: block;
-    font-size: 600%;
+    font-size: 450%;
     font-family: "Helvetica", "Arial", sans-serif;
     width: 50px; }
   #detailed-description #feedback blockquote:before {
