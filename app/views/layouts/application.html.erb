@@ -7,6 +7,8 @@
     <%= stylesheet_link_tag 'coderay' %>
     <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Droid+Sans:bold' %>
     <%= yield(:head) %>
+    
+    <%= render :partial => "google_analytics" %>
   </head>
   <body>
     <%= render :partial => "shared/header" %>
