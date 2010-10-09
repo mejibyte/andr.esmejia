@@ -3,4 +3,8 @@ class Post < ActiveRecord::Base
   default_scope :order => "created_at DESC"
   named_scope :recent, :limit => 3 
   has_many :comments, :dependent => :destroy
+  
+  def to_param
+    "#{self.id}-#{self.title.parameterize}"
+  end
 end
