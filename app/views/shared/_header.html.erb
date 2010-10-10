@@ -6,6 +6,6 @@
   <ul id="navigation">
     <%= button :text => "Home", :id => "tab-home", :url => root_path, :pressed => (controller.is_a?(StaticPagesController) && params[:action] == "home") %>
     <%= button :text => "Blog", :id => "tab-blog", :url => posts_path, :pressed => controller.is_a?(PostsController) %>
-    <%= button :text => "Contact", :id => "tab-contact", :url => "#", :pressed => false %>
+    <%= button :text => "Contact", :id => "tab-contact", :url => contact_me_url, :pressed => false %>
 	</ul>
 </div>
