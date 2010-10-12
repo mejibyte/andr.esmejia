@@ -292,7 +292,9 @@ body {
       height: 30px;
       display: block; }
     #footer #latest-tweets a, #footer #latest-posts a {
-      color: #d98de2; }
+      color: #d98de2;
+      text-decoration: none;
+      border-bottom: 1px dotted; }
     #footer #latest-tweets .tweet, #footer #latest-tweets .post, #footer #latest-posts .tweet, #footer #latest-posts .post {
       padding-top: 18px;
       padding-left: 10px;
