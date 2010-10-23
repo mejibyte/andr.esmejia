@@ -12,6 +12,7 @@ set :scm, "git"
 set :repository, "git@github.com:andmej/andr.esmejia.git"
 set :branch, "master"
 
+
 namespace :deploy do
   desc "Tell Passenger to restart."
   task :restart, :roles => :web do
@@ -33,6 +34,13 @@ namespace :deploy do
     run "mkdir #{shared_path}/config"
     put File.read("config/examples/database.yml"), "#{shared_path}/config/database.yml"
     puts "Now edit the config files and fill in #{shared_path}."
+  end
+end
+
+namespace :db do
+  desc "Migrates the production database."
+  task :migrate do
+    run "cd #{current_path} && rake RAILS_ENV=production db:migrate"
   end
 end
 
