@@ -8,7 +8,7 @@ describe Comment do
       :ip => "value for ip",
       :url => "value for url",
       :body => "value for body",
-      :post => 
+      :post => Factory(:post)
     }
   end
 
