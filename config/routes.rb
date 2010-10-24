@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :posts, :only => [:index, :show]
+  map.resources :posts, :only => [:index, :show, :new, :create]
   map.resource :user_session
 
   map.namespace :admin do |admin|

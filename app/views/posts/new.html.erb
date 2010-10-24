@@ -1,0 +1,21 @@
+<% form_for @post do |f| %>
+  <%= f.error_messages %>
+  <div>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  
+  <div>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+  
+  <div>
+    <%= f.label :published_at %>
+    <%= f.date_select :published_at, :include_blank => true %>
+  </div>
+  
+  <div>
+    <%= f.submit "Go tiger!" %>
+  </div>
+<% end %>
