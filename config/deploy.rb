@@ -27,6 +27,9 @@ namespace :deploy do
   desc "Symlink extra configs and folders."
   task :symlink_extras do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    
+    run "mkdir -p #{release_path}/system/math_jax"
+    run "ln -nfs #{shared_path}/system/math_jax/fonts #{release_path}/system/math_jax/fonts"    
   end
 
   desc "Setup shared directory."
