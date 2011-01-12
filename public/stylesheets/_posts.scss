@@ -69,6 +69,20 @@
 }
 
 #container .post { 
+  
+  blockquote {
+    margin-left: 30px;
+    font-size: 0.9em;
+    border-left: 1px dotted #553687;
+    p {
+      padding: 0 0px 0 10px !important;
+    }
+  }
+  
+  em {
+    font-style: italic;
+  }
+  
   .footer {
     height: 47px;
     background: url(/images/post-footer.png) no-repeat;
@@ -107,7 +121,7 @@
     font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-size: 18px;
   }
-  
+    
   .comments {
     background: url(/images/comments.png) repeat-y;
     width: 780px;
