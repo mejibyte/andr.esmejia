@@ -233,7 +233,7 @@ h3 {
       font-size: 0.9em;
       border-left: 1px dotted #553687; }
       #container .post .body blockquote p, #container .single-post .body blockquote p {
-        padding: 0 0px 0 10px !important; }
+        padding: 5px 0px 5px 10px !important; }
     #container .post .body em, #container .single-post .body em {
       font-style: italic; }
 
