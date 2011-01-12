@@ -65,24 +65,23 @@
     a:hover {
       background-color: #bbb3c7;
     }
+    
+    blockquote {
+      margin-left: 30px;
+      font-size: 0.9em;
+      border-left: 1px dotted #553687;
+      p {
+        padding: 0 0px 0 10px !important;
+      }
+    }
+
+    em {
+      font-style: italic;
+    }
   }
 }
 
 #container .post { 
-  
-  blockquote {
-    margin-left: 30px;
-    font-size: 0.9em;
-    border-left: 1px dotted #553687;
-    p {
-      padding: 0 0px 0 10px !important;
-    }
-  }
-  
-  em {
-    font-style: italic;
-  }
-  
   .footer {
     height: 47px;
     background: url(/images/post-footer.png) no-repeat;

@@ -228,15 +228,15 @@ h3 {
       color: #733687; }
     #container .post .body a:hover, #container .single-post .body a:hover {
       background-color: #bbb3c7; }
+    #container .post .body blockquote, #container .single-post .body blockquote {
+      margin-left: 30px;
+      font-size: 0.9em;
+      border-left: 1px dotted #553687; }
+      #container .post .body blockquote p, #container .single-post .body blockquote p {
+        padding: 0 0px 0 10px !important; }
+    #container .post .body em, #container .single-post .body em {
+      font-style: italic; }
 
-#container .post blockquote {
-  margin-left: 30px;
-  font-size: 0.9em;
-  border-left: 1px dotted #553687; }
-  #container .post blockquote p {
-    padding: 0 0px 0 10px !important; }
-#container .post em {
-  font-style: italic; }
 #container .post .footer {
   height: 47px;
   background: url(/images/post-footer.png) no-repeat; }
