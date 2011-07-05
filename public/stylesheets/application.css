@@ -287,6 +287,28 @@ h3 {
   width: 780px;
   margin: auto; }
 
+#disqus_thread {
+  padding: 20px;
+  margin-bottom: 0px !important;
+  color: #352A45; }
+  #disqus_thread a {
+    text-decoration: none;
+    border-bottom: 1px dotted #553687 !important;
+    color: #553687; }
+  #disqus_thread a:hover {
+    background-color: #bbb3c7; }
+  #disqus_thread .dsq-toolbar-item {
+    opacity: 0.7; }
+  #disqus_thread .dsq-comment-meta, #disqus_thread .dsq-comment-actions {
+    overflow: visible; }
+    #disqus_thread .dsq-comment-meta a, #disqus_thread .dsq-comment-actions a {
+      opacity: 0.9; }
+  #disqus_thread #dsq-footer em {
+    text-decoration: none; }
+  #disqus_thread .dsq-item-trackback, #disqus_thread .dsq-trackback-url, #disqus_thread .dsq-item-sort, #disqus_thread #dsq-sort-select {
+    /* Hide some parts of Disqus that I don't like. */
+    display: none; }
+
 #footer {
   height: 357px;
   width: 962px;
