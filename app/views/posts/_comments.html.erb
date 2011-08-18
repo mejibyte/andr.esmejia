@@ -3,8 +3,8 @@
     var disqus_shortname = 'andmej';
     
     var disqus_identifier = 'post_<%= @post.id %>';
-    var disqus_url = '<%= post_url(@post) %>';
-    var disqus_title = '<%= @post.title %>';
+    var disqus_url = '<%= escape_javascript post_url(@post) %>';
+    var disqus_title = '<%= escape_javascript @post.title %>';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
