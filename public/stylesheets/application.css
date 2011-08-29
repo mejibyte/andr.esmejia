@@ -45,8 +45,19 @@ body {
 .hide {
   display: none; }
 
+h1 {
+  font-size: 1.2em;
+  font-weight: bold; }
+
+h2 {
+  font-size: 1.15em;
+  font-weight: bold; }
+
 h3 {
   font-size: 1.1em;
+  font-weight: bold; }
+
+h4 {
   font-weight: bold; }
 
 #MathJax_Message {
