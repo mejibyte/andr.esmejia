@@ -20,9 +20,11 @@
     background: transparent;
     float: right;
     margin-right: 20px;
+    padding: 0;
 
     li {
       float: left;
+	    list-style: none;
       margin: {
         left: 10px;
         top: 87px;

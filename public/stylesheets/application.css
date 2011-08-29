@@ -45,6 +45,13 @@ body {
 .hide {
   display: none; }
 
+ul {
+  padding: 10px; }
+
+li {
+  list-style-type: disc;
+  margin-left: 30px; }
+
 h1 {
   font-size: 1.2em;
   font-weight: bold;
@@ -53,12 +60,12 @@ h1 {
 h2 {
   font-size: 1.1em;
   font-weight: bold;
-  padding-left: 10px; }
+  padding: 10px 20px; }
 
 h3 {
   font-size: 1.05em;
   font-weight: bold;
-  padding-left: 15px; }
+  padding-left: 10px 15px; }
 
 h4 {
   font-weight: bold; }
@@ -83,9 +90,11 @@ h4 {
     display: block;
     background: transparent;
     float: right;
-    margin-right: 20px; }
+    margin-right: 20px;
+    padding: 0; }
     #header ul#navigation li {
       float: left;
+      list-style: none;
       margin-left: 10px;
       margin-top: 87px; }
       #header ul#navigation li a {
