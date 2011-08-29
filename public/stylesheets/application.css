@@ -51,11 +51,13 @@ h1 {
 
 h2 {
   font-size: 1.15em;
-  font-weight: bold; }
+  font-weight: bold;
+  padding-left: 10px; }
 
 h3 {
-  font-size: 1.1em;
-  font-weight: bold; }
+  font-size: 1.05em;
+  font-weight: bold;
+  padding-left: 15px; }
 
 h4 {
   font-weight: bold; }
