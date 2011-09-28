@@ -1,0 +1,16 @@
+.DS_Store
+config/database.yml
+config/app_config.yml
+config/newrelic.yml
+db/*.sqlite3
+*.sql
+db/schema.rb
+log/*
+tmp/*
+test/*
+spec/fixtures/*
+public/system
+*~
+mkmf.log
+text/*
+.sass-cache/*
