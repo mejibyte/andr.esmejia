@@ -3,6 +3,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.6'
+gem 'mysql2', '~> 0.2.11'
 
 gem 'twitter'
 gem 'RedCloth'
@@ -11,3 +12,4 @@ source 'http://gems.github.com/'
 gem 'augustl-redclothcoderay', :require => 'redclothcoderay'
 gem 'authlogic'
 gem 'paperclip'
+gem 'active_scaffold', :git => 'git://github.com/activescaffold/active_scaffold.git', :branch => 'rails-3.0'

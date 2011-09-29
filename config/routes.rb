@@ -1,4 +1,4 @@
-ActionController::Routing::Routes.draw do |map|
+AndrEsmejia::Application.routes.draw do |map|
   map.resources :posts, :only => [:index, :show, :new, :create]
   map.resource :user_session
 
