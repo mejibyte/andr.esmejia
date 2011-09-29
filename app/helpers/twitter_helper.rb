@@ -7,6 +7,6 @@ module TwitterHelper
     text = text.split(" ").collect do |word|
       word.gsub(/^@(\w*)/) { link_to("@" + $1, "http://twitter.com/" + $1) }
     end.join(" ")
-    auto_link(text, options)
+    auto_link(text, options).html_safe
   end
 end
