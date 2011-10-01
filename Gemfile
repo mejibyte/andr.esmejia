@@ -16,4 +16,5 @@ gem 'active_scaffold', :git => 'git://github.com/activescaffold/active_scaffold.
 
 group :test, :development do
   gem "rspec-rails", "~> 2.6"
+  gem "factory_girl_rails"
 end
