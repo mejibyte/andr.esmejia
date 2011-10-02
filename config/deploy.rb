@@ -1,22 +1,36 @@
+# -*- coding: utf-8 -*-
+
 set :application, "andr.esmejia.com"
 role :app, "69.164.213.254"
 role :web, "69.164.213.254"
 role :db, "69.164.213.254", :primary => true
 
-set :user, "esmejia"
+set :user, "rails"
 set :deploy_to, "/home/#{user}/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
+set :keep_releases, 30
+
 
 set :scm, "git"
 set :repository, "git@github.com:andmej/andr.esmejia.git"
-set :branch, "master"
+set :branch, "rails3"
 
+require 'bundler/capistrano'
+
+# RVM stuff
+set :rvm_ruby_string, '1.9.2-p290'
+set :rvm_type, :user
+$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
+require "rvm/capistrano"                               # Load RVM's capistrano plugin.
+
+
+#########################################################
 
 namespace :deploy do
   desc "Tell Passenger to restart."
   task :restart, :roles => :web do
-    run "touch #{deploy_to}/current/tmp/restart.txt"
+    run "touch #{current_path}/tmp/restart.txt"
   end
   
   desc "Do nothing on startup so we don't get a script/spin error."
@@ -31,13 +45,6 @@ namespace :deploy do
     run "mkdir -p #{release_path}/system/math_jax"
     run "ln -nfs #{shared_path}/system/math_jax/fonts #{release_path}/system/math_jax/fonts"    
   end
-
-  desc "Setup shared directory."
-  task :setup_shared do
-    run "mkdir #{shared_path}/config"
-    put File.read("config/examples/database.yml"), "#{shared_path}/config/database.yml"
-    puts "Now edit the config files and fill in #{shared_path}."
-  end
 end
 
 namespace :db do
@@ -47,5 +54,4 @@ namespace :db do
   end
 end
 
-after "deploy:setup", "deploy:setup_shared"
 after "deploy:update_code", "deploy:symlink_extras"
