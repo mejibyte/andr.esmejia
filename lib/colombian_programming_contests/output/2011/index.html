@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="../stylesheets/style.css" />
+<link rel="stylesheet" type="text/css" href="../stylesheets/syntaxhighlighter/shCore.css" />
+<link rel="stylesheet" type="text/css" href="../stylesheets/syntaxhighlighter/shThemeRailsGuides.css" />
+
+<link rel="stylesheet" type="text/css" href="../stylesheets/fixes.css" />
+</head>
+
+<body class="guide">
+  <div id="header">
+      
+  </div>
+  <div id="index">
+      <ul>
+<li>
+<a href="#toc_0">Solutions to problems from Colombian Programming Contest 2011</a>
+<ul>
+<li>
+<a href="#toc_1">Solution to problem A - The Starflyer Agents</a>
+</li>
+<li>
+<a href="#toc_2">Solution to problem B - Sewing Buttons with Grandma</a>
+</li>
+<li>
+<a href="#toc_3">Solution to problem C - Document Compression</a>
+</li>
+<li>
+<a href="#toc_4">Solution to problem D - Digital Roulette</a>
+</li>
+<li>
+<a href="#toc_5">Solution to problem E - Edgetown's Traffic Jams</a>
+</li>
+<li>
+<a href="#toc_6">Solution to problem F - Flight Control</a>
+</li>
+<li>
+<a href="#toc_7">Solution to problem G - Gas Stations</a>
+</li>
+<li>
+<a href="#toc_8">Solution to problem H - Handgun Shooting Sport</a>
+</li>
+<li>
+<a href="#toc_9">Solution to problem I - Inspecting Radars</a>
+</li>
+<li>
+<a href="#toc_10">Solution to problem J - Philip J. Fry Problem</a>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+  <div id="container">
+    <h1>Solutions to problems from Colombian Programming Contest 2011</h1>
+
+<div class="author">
+  <p>by Andrés Mejía</p>
+  <p>October 12, 2011</p>
+</div>
+
+<h2>Solution to problem A - The Starflyer Agents</h2>
+
+<h2>Solution to problem B - Sewing Buttons with Grandma</h2>
+
+<h2>Solution to problem C - Document Compression</h2>
+
+<h2>Solution to problem D - Digital Roulette</h2>
+
+<p>The problem can be rephrased as follows: count the number of different values of the expression <code>P(x) % (n + 1)</code> for all <code>x</code>&#39;s between 0 and <code>M</code>. Since the constraints are small (<code>M</code> ≤ 10000 and <code>k</code> ≤ 10), we can use brute force to evaluate the polynomial on every possible <code>x</code>.</p>
+
+<p>There are two caveats, however:</p>
+
+<p>First, notice that when evaluating the polynomial we&#39;ll have to compute expressions of the form <code>a[i] * x^i</code>. In the worst case, <code>i</code> might be as big as 10, <code>x</code> might be as big as 100000, and <code>a[i]</code> might be as big as 10000000, which means that <code>a[i] * x^i</code> might be as big as 10<sup>57.</sup> This doesn&#39;t fit in any native data type (recall that currently in C++ the biggest integer we can store in a native data type is 2<sup>64</sup> - 1 which fits in a <code>long long</code>).</p>
+
+<p>Luckily, we don&#39;t really care about <code>a[i] * x^i</code>, we just care about <code>(a[i] * x^i) % (n + 1)</code>, so we can compute the expression without overflow. Recall from modular arithmetic properties that <code>(a * b) % n == ((a % n) * (b % n)) % n</code>, so we just have to compute <code>(a[i] * (x % (n + 1)) * (x % (n + 1)) * ... * (x % (n + 1))) % (n + 1)</code>, where there are exactly <code>i</code> <code>x</code>&#39;s in the expression (in other words, start with <code>a[i]</code> and multiply it <code>i</code> times with <code>x</code>, taking the result <code>% (n + 1)</code> after every step).</p>
+
+<p>There&#39;s still a slight possibility of overflow: when we evaluate <code>(a[i] * x) % (n + 1)</code>, <code>a[i] * x</code> might be as big as 10<sup>7</sup> * 10<sup>5</sup> = 10<sup>12,</sup> but this fits comfortably in a <code>long long</code> so everything will be all right if we use <code>long long</code>s when calculating this product.</p>
+
+<p>The second consideration is that since we are potentially evaluating the polynomial 10000 times, we need to be able to compute it as fast as possible. There&#39;s something known as Horner&#39;s rule, that lets us evaluate the polynomial in O(<code>n</code>), where <code>n</code> is its degree. This is fast enough. Basically, it&#39;s just a clever way of factoring out powers of <code>x</code>. Namely, Horner&#39;s rule says that:</p>
+
+<p><img src="../images/horner.png" alt="Horner&#39;s Rule"></p>
+
+<p>Finally, in C++, the easiest way to count the number of different answers is using a <code>set</code>. We just add all possible answers to the <code>set</code> and then ask for its size.</p>
+
+<p>Here&#39;s a sample implementation in C++:</p>
+
+<pre>
+// Code written by Andrés Mejía
+using namespace std;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;set&gt;
+
+int main(){
+    int n, m;
+    while (cin &gt;&gt; n &gt;&gt; m) {
+        if (n == 0 and m == 0) break;
+        int k; cin &gt;&gt; k;
+        vector&lt;int&gt; a(k + 1);
+        // Read coefficients
+        for (int i = 0; i &lt; k + 1; ++i) {
+            cin &gt;&gt; a[i];
+        }
+        int mod = n + 1;
+        set&lt;int&gt; ans;
+        
+        // Brute force on x
+        for (int x = 0; x &lt;= m; x++){
+            // calculate P(x) and store the result in y
+            int y = 0, d = 1;
+            for (int i = 0; i &lt; a.size(); ++i) {
+                // At this point, d == (x^i) % mod
+                y = (y + 1LL * a[i] * d) % mod; // the 1LL is to use long longs in the multiplication
+                d = (1LL * d * x) % mod;
+            }
+            ans.insert(y);
+        }
+        cout &lt;&lt; ans.size() &lt;&lt; endl;
+    }
+    return 0;
+}
+
+</pre>
+
+<p>The complexity of this algorithm is O(<code>m * k * log(n)</code>) (the <code>log</code> factor is what it takes to store a number in the <code>set</code>).</p>
+
+<h2>Solution to problem E - Edgetown&#39;s Traffic Jams</h2>
+
+<h2>Solution to problem F - Flight Control</h2>
+
+<h2>Solution to problem G - Gas Stations</h2>
+
+<h2>Solution to problem H - Handgun Shooting Sport</h2>
+
+<h2>Solution to problem I - Inspecting Radars</h2>
+
+<h2>Solution to problem J - Philip J. Fry Problem</h2>
+
+  </div>
+
+  <div id="footer">
+  </div>
+
+  <script type="text/javascript" src="../javascripts/syntaxhighlighter/shCore.js"></script>
+  <script type="text/javascript" src="../javascripts/syntaxhighlighter/shBrushRuby.js"></script>
+  <script type="text/javascript" src="../javascripts/syntaxhighlighter/shBrushCpp.js"></script>
+  <script type="text/javascript" src="../javascripts/syntaxhighlighter/shBrushPlain.js"></script>
+  <script type="text/javascript">
+    SyntaxHighlighter.all()
+  </script>
+</body>
+</html>

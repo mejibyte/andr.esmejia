@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title><%= yield(:page_title) || 'Ruby on Rails Guides' %></title>
+
+<link rel="stylesheet" type="text/css" href="../stylesheets/style.css" />
+<link rel="stylesheet" type="text/css" href="../stylesheets/syntaxhighlighter/shCore.css" />
+<link rel="stylesheet" type="text/css" href="../stylesheets/syntaxhighlighter/shThemeRailsGuides.css" />
+
+<link rel="stylesheet" type="text/css" href="../stylesheets/fixes.css" />
+</head>
+
+<body class="guide">
+  <div id="header">
+      <%= yield :header_section %>
+  </div>
+  <div id="index">
+      <%= yield :index_section %>
+  </div>
+
+  <div id="container">
+    <%= yield.html_safe %>
+  </div>
+
+  <div id="footer">
+  </div>
+
+  <script type="text/javascript" src="../javascripts/syntaxhighlighter/shCore.js"></script>
+  <script type="text/javascript" src="../javascripts/syntaxhighlighter/shBrushRuby.js"></script>
+  <script type="text/javascript" src="../javascripts/syntaxhighlighter/shBrushCpp.js"></script>
+  <script type="text/javascript" src="../javascripts/syntaxhighlighter/shBrushPlain.js"></script>
+  <script type="text/javascript">
+    SyntaxHighlighter.all()
+  </script>
+</body>
+</html>

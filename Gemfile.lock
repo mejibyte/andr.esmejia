@@ -101,6 +101,7 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.9.2)
+    redcarpet (2.0.0b5)
     render_component_vho (3.0.3)
       railties (~> 3.0.0)
     rspec (2.6.0)
@@ -146,5 +147,6 @@ DEPENDENCIES
   mysql2 (~> 0.2.11)
   paperclip
   rails (= 3.0.6)
+  redcarpet (~> 2.0.0b5)
   rspec-rails (~> 2.6)
   twitter

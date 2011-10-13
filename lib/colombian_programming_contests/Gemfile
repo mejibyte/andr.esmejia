@@ -1,0 +1,4 @@
+source 'http://rubygems.org'
+
+gem 'redcarpet', '~> 2.0.0b5'
+gem 'rails', '3.0.6'
