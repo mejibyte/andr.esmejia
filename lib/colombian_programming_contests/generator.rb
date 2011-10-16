@@ -78,7 +78,7 @@ module ColombianProgrammingContests
         else
           body = File.read(File.join(source_dir, guide))
           # Render index
-          view.content_for(:index_section) { Redcarpet::Markdown.new(Redcarpet::Render::HTML_TOC).render(body).html_safe }
+          # view.content_for(:index_section) { Redcarpet::Markdown.new(Redcarpet::Render::HTML_TOC).render(body).html_safe }
           # Render content
           markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true, :superscript => true)
           body = markdown.render(view.render(:inline => body))

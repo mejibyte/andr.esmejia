@@ -1,17 +1,41 @@
-# Solutions to problems from Colombian Programming Contest 2011
+# Solutions to problems from Colombian National Programming Contest 2011
 
 <div class="author">
-  <p>by Andrés Mejía</p>
-  <p><%= l Time.now, :format => "%B %d, %Y" %></p>
+  <p class="name">by Andrés Mejía</p>
+  <p class="date"><%= l Time.now, :format => "%B %d, %Y" %></p>
 </div>
 
-## Solution to problem A - The Starflyer Agents
+<a name="contents"></a>
 
-## Solution to problem B - Sewing Buttons with Grandma
+## Table of contents ##
 
-## Solution to problem C - Document Compression
+* [Solution to problem A - The Starflyer Agents](#solution-a)
+* [Solution to problem B - Sewing Buttons with Grandma](#solution-b)
+* [Solution to problem C - Document Compression](#solution-c)
+* [Solution to problem D - Digital Roulette](#solution-d)
+* [Solution to problem E - Edgetown's Traffic Jams](#solution-e)
+* [Solution to problem F - Flight Control](#solution-f)
+* [Solution to problem G - Gas Stations](#solution-g)
+* [Solution to problem H - Handgun Shooting Sport](#solution-h)
+* [Solution to problem I - Inspecting Radars](#solution-i)
+* [Solution to problem J - Philip J. Fry Problem](#solution-j)
 
-## Solution to problem D - Digital Roulette
+
+<a name="solution-a"></a>
+
+## Solution to problem A - The Starflyer Agents ##
+
+<a name="solution-b"></a>
+
+## Solution to problem B - Sewing Buttons with Grandma ##
+
+<a name="solution-c"></a>
+
+## Solution to problem C - Document Compression ##
+
+<a name="solution-d"></a>
+
+## Solution to problem D - Digital Roulette ##
 
 The problem can be rephrased as follows: count the number of different values of the expression `P(x) % (n + 1)` for all `x`'s between 0 and `M`. Since the constraints are small (`M` ≤ 10000 and `k` ≤ 10), we can use brute force to evaluate the polynomial on every possible `x`.
 
@@ -38,14 +62,28 @@ Here's a sample implementation in C++:
 
 The complexity of this algorithm is O(`m * k * log(n)`) (the `log` factor is what it takes to store a number in the `set`).
 
-## Solution to problem E - Edgetown's Traffic Jams
+[Back to top](#contents)
 
-## Solution to problem F - Flight Control
+<a name="solution-e"></a>
 
-## Solution to problem G - Gas Stations
+## Solution to problem E - Edgetown's Traffic Jams ##
 
-## Solution to problem H - Handgun Shooting Sport
+<a name="solution-f"></a>
 
-## Solution to problem I - Inspecting Radars
+## Solution to problem F - Flight Control ##
 
-## Solution to problem J - Philip J. Fry Problem
+<a name="solution-g"></a>
+
+## Solution to problem G - Gas Stations ##
+
+<a name="solution-h"></a>
+
+## Solution to problem H - Handgun Shooting Sport ##
+
+<a name="solution-i"></a>
+
+## Solution to problem I - Inspecting Radars ##
+
+<a name="solution-j"></a>
+
+## Solution to problem J - Philip J. Fry Problem ##
