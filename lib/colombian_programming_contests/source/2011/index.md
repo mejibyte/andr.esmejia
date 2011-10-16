@@ -33,6 +33,46 @@
 
 ## Solution to problem C - Document Compression ##
 
+The fact that's key to solve this problem is noticing that there are at most 16 different terms among all possible documents. This is good news because there are only `2^16 = 65536` different subsets of terms. Some of these subsets must be the documents we want to codify. Since this is a small number, we can simply precompute how many basis documents we need to form each of the 65536 possible subsets and then read the answer for each document we want to codify in `O(1)`.
+
+When working with subsets, it's usually very helpful to use bitwise operations. We will represent a subset of terms `S` with a single integer `x`, where the `i`-th bit of `x` (in binary representation) is 1 if `i+1` is present in `S` and 0 otherwise. For example, if `S = {2, 3, 7, 15, 16}` then `x = 1100000001000110`:
+
+![Binary representation of sets](../images/binary_representation_of_sets.png)
+
+This is useful because we can find the union of two subsets with a single bitwise `or`, which is blazingly fast and simple (we can also find the intersection with a bitwise `and`, but we don't need that in this problem).
+
+Now, how do we find the minimum number of basis documents needed to form each possible subset of terms? Let's consider a graph where each node is a subset of terms and there's an edge from `u` to node `v` if we can mix `u` with a basis document and get `v`. It's easier to explain with an example, so let's imagine we have the following basis documents:
+
+<pre>
+  b[0] = {1}
+  b[1] = {1, 3}
+  b[2] = {2, 4}
+  b[3] = {1, 2, 3}
+</pre>
+
+The graph we're talking about would look something like this (the index of the actual basis document that was used on each edge is shown in red):
+
+![Document graph](../images/document_graph.png)
+
+Every path in this graph from `0000` to any node `v` represents a subset of basis documents that were chosen and mixed together to encode document `v`. Since we want to use the least possible number of basis documents, the answer is simply the shortest path in this graph (starting from `0000`).
+
+For example, in the graph above we can see that the shortest path from `0000` to `0001` is 1. This means that we can form the document `{1}` using a single basis document (indeed, we just need `b[0]`). There are three different paths to `0111`; the shortest one has length 1. This means that we can form the document `{1, 2, 3}` with a single basis document (indeed, we just need `b[4]`). There are several paths to `1111`; the shortest one has length 2 (indeed, we can form `{1, 2, 3, 4}` mixing two basis documents, `b[2]` and `b[3]`, or `b[1]` and `b[2]`). There is no path to `0110`. This means we cannot form `{2, 3}` no matter how hard we try.
+
+Since we have a directed graph where all edges have the same length, we can use a classical algorithm known as Breadth First Search (BFS) to find the shortest path from the first node to all others.
+
+It's worth noting that we don't really need to explicitly build the graph above. We can just build it on the fly as we traverse it.
+
+Here's a sample implementation in C++:
+
+<pre class="brush: cpp">
+  Coming soon
+</pre>
+
+
+### Exercises ###
+* Modify the algorithm above to not only tell what's the minimum number of basis documents needed, but actually tell which are the basis documents used.
+* Modify the algorithm above to calculate in how many different ways you can form some given document.
+
 <a name="solution-d"></a>
 
 ## Solution to problem D - Digital Roulette ##
