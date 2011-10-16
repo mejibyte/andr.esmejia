@@ -55,7 +55,7 @@ Finally, in C++, the easiest way to count the number of different answers is usi
 
 Here's a sample implementation in C++:
 
-<pre>
+<pre class="brush: cpp">
 <%= File.read "source/2011/d.cpp" %>
 </pre>
 
