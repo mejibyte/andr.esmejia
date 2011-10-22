@@ -65,13 +65,13 @@ It's worth noting that we don't really need to explicitly build the graph above.
 Here's a sample implementation in C++:
 
 <pre class="brush: cpp">
-  Coming soon
+  <%= File.read "source/2011/c.cpp" %>
 </pre>
 
 
 ### Exercises ###
-* Modify the algorithm above to not only tell what's the minimum number of basis documents needed, but actually tell which are the basis documents used.
-* Modify the algorithm above to calculate in how many different ways you can form some given document.
+* Modify the algorithm above to not only tell the minimum number of basis documents needed, but also tell which are the basis documents that where actually used.
+* Modify the algorithm above to count in how many different ways you can form some given document.
 
 <a name="solution-d"></a>
 

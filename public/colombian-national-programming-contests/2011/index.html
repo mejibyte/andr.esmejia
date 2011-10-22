@@ -28,7 +28,7 @@
 
 <div class="author">
   <p class="name">by Andrés Mejía</p>
-  <p class="date">October 16, 2011</p>
+  <p class="date">October 22, 2011</p>
 </div>
 
 <p><a name="contents"></a></p>
@@ -92,14 +92,77 @@
 <p>Here&#39;s a sample implementation in C++:</p>
 
 <pre class="brush: cpp">
-  Coming soon
+  // Code written by Ana Echavarría
+using namespace std;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+
+// Maximum base size is 2^16 - 1
+const int maxN = 1 &lt;&lt; 16;
+int length [maxN];
+
+int main(){
+    int nBases, nDocs;
+    while(cin &gt;&gt; nBases &gt;&gt; nDocs){
+        if  (nBases == 0 and nDocs == 0) break;
+        //Initialize length
+        for (int i = 0; i &lt; maxN; i++) length[i] = -1;
+        // Read the bases
+        vector &lt;int&gt; bases(nBases, 0);
+        for (int b = 0; b &lt; nBases; b++){
+            int k; cin &gt;&gt; k;
+            while(k--){
+                int num; cin &gt;&gt; num;
+                bases[b] |= 1 &lt;&lt; (num-1);
+            }
+        }
+        // Read the documents
+        vector &lt;int&gt; docs(nDocs, 0);
+        for (int d = 0; d &lt; nDocs; d++){
+            int k; cin &gt;&gt; k;
+            while(k--){
+                int num; cin &gt;&gt; num;
+                docs[d] |= 1 &lt;&lt; (num-1);
+            }
+        }
+        // Start BFS
+        queue &lt;int&gt; q;
+        q.push(0);
+        length[0] = 0;
+        while(q.size() &gt; 0){
+            int curr = q.front();
+            q.pop();
+            for (int i = 0; i &lt; bases.size(); i++){
+                // Build next document
+                int next = curr | bases[i];
+                // Check if it has not been visited yet
+                if (length[next] &gt;= 0) continue;
+                length[next] = length[curr] + 1;
+                q.push(next);   
+            }
+        }
+        // Print answers
+        for (int d = 0; d &lt; docs.size(); d++){
+            int document = docs[d];
+            if (length[document] &gt;= 0) cout &lt;&lt; length[document];
+            else cout &lt;&lt; 0;
+            if (d &lt; docs.size() - 1) cout &lt;&lt; &quot; &quot;;
+            else cout &lt;&lt; endl;
+        }
+        
+    }
+    
+    return 0;
+}
+
 </pre>
 
 <h3>Exercises</h3>
 
 <ul>
-<li>Modify the algorithm above to not only tell what&#39;s the minimum number of basis documents needed, but actually tell which are the basis documents used.</li>
-<li>Modify the algorithm above to calculate in how many different ways you can form some given document.</li>
+<li>Modify the algorithm above to not only tell the minimum number of basis documents needed, but also tell which are the basis documents that where actually used.</li>
+<li>Modify the algorithm above to count in how many different ways you can form some given document.</li>
 </ul>
 
 <p><a name="solution-d"></a></p>
