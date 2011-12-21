@@ -1,0 +1,342 @@
+/* $Id: style.css 3682 2011-10-11 15:20:50Z kink $ */
+
+body {
+	color: black;
+	background-color: white;
+	font-family: sans-serif;
+}
+
+img {	border: 0; }
+
+.sol {
+	font-weight: bold;
+	font-variant: small-caps;
+}
+
+.sol_correct      { color: green;  }
+.sol_incorrect    { color: red;    }
+.sol_queued       { color: gray;   }
+
+tr.sub_ignore td {
+	text-decoration: line-through;
+}
+
+a:link, a:visited { color: blue;   }
+a:hover           { color: purple; }
+a:active          { color: red;    }
+
+.disabled         { color: silver; }
+.disabled a       { color: gray;   }
+.nodata           { color: gray; font-style: italic; }
+
+/* general table layout (not in scoreboard or lists) */
+table {
+	border-collapse: separate;
+	border-spacing: 2px;
+}
+
+th {
+	vertical-align: bottom;
+}
+
+caption {
+	font-weight: bold;
+	margin-bottom: 1ex;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	background-color: gray;
+	margin-top: 2em;
+}
+address { font-size: smaller; }
+
+tr.unread td {
+	font-weight: bold;
+}
+
+/* more spacing in lists of teams, submissions, etc. */
+.list {
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+.list th {
+	vertical-align: bottom;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+td {
+	vertical-align: top;
+}
+
+.list tr { border-bottom: 1px solid silver; }
+.list tr.roweven { background: #ededed; }
+.list tr:hover { background: #ffffcc; }
+.list thead tr { border-bottom-color: black; }
+.list thead tr:hover { background: white; }
+.list a {
+	text-decoration: none;
+	color: black;
+	display: block;
+	padding: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.list .disabled a  { color: silver;   }
+.list .editdel  a  { display: inline; }
+
+.output_text {
+	border-top: 1px dotted #C0C0C0;
+	border-bottom: 1px dotted #C0C0C0;
+	background-color: #FAFAFA;
+	margin: 0;
+	padding: 5px;
+	font-family: monospace;
+}
+
+span.differ {
+	color: Red;
+}
+
+span.endline {
+	color: Orange;
+}
+
+span.extra {
+	color: Red;
+}
+
+span.diff-old {
+	color: Red;
+}
+
+span.diff-new {
+	color: Green;
+}
+
+
+.teamid { font-family: monospace; }
+.probid, .langid { font-variant: small-caps; }
+
+#menutop a {
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #FFFFF0;
+	border: 1px solid black;
+	margin: 2px;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#menutop a.new {
+	color: #FF0000;
+}
+
+#menutopright {
+	position: absolute; right: 1ex; top: 1ex;
+	text-align: right;
+}
+#clock {
+	font-size: small;
+	font-family: monospace;
+	border: 1px dashed #ccc;
+	padding: 4px;
+	color: gray;
+}
+#timeleft { color: #800080;}
+#refresh {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+fieldset {
+	margin: 2em;
+	padding: 1em;
+}
+
+.error {
+	color: red;
+	font-family: monospace;
+	border: 1px dotted red;
+}
+
+legend {
+	font-variant: small-caps;
+	font-weight: bold;
+	padding: .1ex .5ex;
+}
+
+.error legend {
+	font-size: x-large;
+	border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+}
+
+.center { margin: 0px auto; }
+
+.scoreboard { border-collapse: collapse; }
+.scoreboard td { font-size: small; }
+.scoreboard tr { border-bottom: 1px solid silver; }
+.scoreboard td, .scoreboard th {
+	border-right: 1px solid black;
+	padding: 3px;
+}
+.scoreboard a {
+	display: block;
+	padding: 3px;
+	text-decoration: none;
+	color: black;
+}
+
+.scoreboard .scoretn { padding: 0px; width: 25ex; }
+.scoreboard .scoreaf { white-space: nowrap; }
+
+.scoreheader {
+	font-variant: small-caps;
+	border-bottom: 2px solid black;
+}
+.score_correct   { background: #33FF66; }
+.score_incorrect { background: #FF6666; }
+.score_neutral   { background: white;   }
+
+#scoresolv,#scoretotal { width: 5em; }
+.scorenc,.scorett,.scorepl { text-align: right; width: 2ex; }
+td.scorenc { border-color: silver; }
+
+.scoreprob { width: 7em; }
+.scoreaffil { text-align: center; }
+
+#scoresummary {
+	border-top: 2px solid black;
+	border-bottom: none;
+	font-variant: small-caps;
+}
+#scorethisisme .scoretn {
+	background: #ff6600;
+	font-weight: bold;
+}
+
+#lastmod {
+	color: gray;
+	font-size: x-small;
+	position: absolute; right: 1ex; margin-top: 1em;
+}
+
+#teamscoresummary { margin-top: 2.5em; }
+
+#teampicture { position: absolute; right: 4ex; top: 7ex; }
+
+/* between different sortorder-categories, print a thick line */
+.sortorderswitch { border-top: 2px solid black; }
+
+/* between different contests, print a thin line */
+.contestswitch { border-top: 1px solid black; }
+
+.submissionsuccessful {
+	font-weight: bold;
+	background-color: #FFFFF0;
+	border: 1px solid black;
+	margin: 1em;
+	padding: 2px;
+	color: #006400;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+input,select,textarea {
+	border: solid 1px darkgray;
+	background-color: #F0F0F0;
+}
+input,select {
+	cursor: pointer;
+}
+
+h3.teamoverview {
+	border-top: solid 1px darkgray;
+	border-bottom: solid 1px darkgray;
+	background-color: #c4d8ff;
+	font-size: smaller;
+	font-weight: normal;
+	margin-top: 2ex;
+	padding-left: 1ex;
+}
+
+#submitlist,#clarlist {
+	width: 48%;
+}
+#submitlist {
+	position: absolute;
+	left: 1ex;
+}
+#clarlist {
+	position: absolute;
+	right: 1ex;
+}
+.compilation-success {
+	color: green;
+	font-style: italic;
+}
+.compilation-error {
+	color: red;
+	font-style: italic;
+}
+#submitform, .submissiondone {
+	text-align: center;
+}
+#submitlist .list, #clarlist .list {
+	width: 100%;
+}
+#submitlist .list th, #clarlist .list th {
+	text-align: left;
+}
+#submitlist td.result, #clarlist td.clartext {
+	width: 1000ex;
+}
+#submitlist tr.highlight {
+	background-color: #c4d8ff;
+	border-color: blue;
+}
+.errorfield {
+	border-color: red;
+	color: red;
+}
+.button {
+	border: solid 1px darkgray;
+	background-color: #F0F0F0;
+	font-size: 90%;
+}
+
+h2#teamwelcome {
+	padding-bottom: 0;
+	margin-bottom: 0;
+	margin-left: 3em;
+	font-weight: normal;
+}
+#teamwelcometeam {
+	font-weight: bold;	
+}
+h3#contestnotstarted {
+	color: silver;
+	margin-top: .2ex;
+	margin-left: 8em;
+}
+
+span.fileinputs {
+	position: relative;
+}
+span.fakefile {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+input.file {
+	position: relative;
+	text-align: right;
+	opacity: 0; /* CSS standard */
+	filter: alpha(opacity: 0); /* IE */
+	-moz-opacity: 0; /* Ancient Mozilla/FF */
+	z-index: 2;
+}
+
