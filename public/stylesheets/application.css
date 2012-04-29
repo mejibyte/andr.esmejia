@@ -160,7 +160,9 @@ h4 {
     #detailed-description ul li {
       background-image: url(/images/bullet.png);
       background-repeat: no-repeat;
-      padding-left: 25px; }
+      list-style-type: none;
+      padding-left: 25px;
+      margin-left: 16px; }
   #detailed-description #feedback blockquote {
     display: block;
     padding: 0 60px;
