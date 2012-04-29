@@ -3,6 +3,14 @@
     <%= link_to "Andrés Mejía", root_path %>
   </h1>
   
+
+    <% if logged_in? %>
+      <span>
+         You are logged in. <%= link_to "Log out.", user_session_path, :method => :delete %>
+      </span>
+  <% end %>
+
+  
   <ul id="navigation">
     <%= button :text => "Home", :id => "tab-home", :url => root_path, :pressed => (controller.is_a?(StaticPagesController) && params[:action] == "home") %>
     <%= button :text => "Blog", :id => "tab-blog", :url => posts_path, :pressed => controller.is_a?(PostsController) %>

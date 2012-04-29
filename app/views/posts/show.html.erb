@@ -11,7 +11,11 @@
   </div>
   <%= clear %>
   <div class="body">
-    <%= textile_to_html @post.body %>  
+    <%= textile_to_html @post.body %>
+    
+    <% if logged_in? %>
+        <div><%= link_to "Edit this post", edit_admin_post_path(@post) %></div>
+    <% end %>
   </div>
   <div class="footer">
     <a name="comments"></a>
