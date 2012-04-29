@@ -14,13 +14,4 @@ class PostsController < ApplicationController
     @post = Post.new
     render :action => "new", :layout => "admin"
   end
-  
-  def create
-    @post = Post.new(params[:post])
-    if @post.save
-      redirect_to post_path(@post), :notice => "Successfully created post."
-    else
-      render :action => "new", :layout => "admin"
-    end
-  end
 end
