@@ -4,7 +4,7 @@
     <%= post.title %>
   </div>
   <div class="date">
-      <%= link_to "#{time_ago_in_words post.created_at} ago", post_path(post) %>
+      <%= link_to "#{time_ago_in_words post.published_at} ago", post_path(post) %>
   </div>
 </div>
 <% end %>
