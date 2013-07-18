@@ -11,6 +11,7 @@ source 'http://gems.github.com/'
 gem 'augustl-redclothcoderay', :require => 'redclothcoderay'
 gem 'authlogic'
 gem 'paperclip'
+gem 'active_scaffold', :git => 'git://github.com/activescaffold/active_scaffold.git', :branch => 'rails-3.0'
 gem 'redcarpet', '~> 2.0.0b5'
 
 group :test, :development do
