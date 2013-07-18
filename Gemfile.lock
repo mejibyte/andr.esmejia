@@ -1,13 +1,3 @@
-GIT
-  remote: git://github.com/activescaffold/active_scaffold.git
-  revision: 377095b753ae6d847b42f42b994a8de6b3708e33
-  branch: rails-3.0
-  specs:
-    active_scaffold (3.0.23)
-      rails (~> 3.0.0)
-      render_component_vho
-      verification
-
 GEM
   remote: http://rubygems.org/
   remote: http://gems.github.com/
@@ -95,8 +85,6 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     redcarpet (2.0.0b5)
-    render_component_vho (3.0.3)
-      railties (~> 3.0.0)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
       rspec-expectations (~> 2.6.0)
@@ -115,16 +103,12 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.35)
-    verification (1.0.1)
-      actionpack (~> 3.0.0)
-      activesupport (~> 3.0.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   RedCloth
-  active_scaffold!
   augustl-redclothcoderay
   authlogic
   coderay
