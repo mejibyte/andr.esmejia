@@ -61,6 +61,7 @@ GEM
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
       mime-types
+    pg (0.15.1)
     polyglot (0.3.3)
     rack (1.2.6)
     rack-mount (0.6.14)
@@ -115,6 +116,7 @@ DEPENDENCIES
   factory_girl_rails
   mysql2 (~> 0.2.11)
   paperclip
+  pg
   rails (= 3.0.19)
   redcarpet (~> 2.0.0b5)
   rspec-rails (~> 2.6)
