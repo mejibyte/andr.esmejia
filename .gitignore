@@ -9,7 +9,6 @@ log/*
 tmp/*
 test/*
 spec/fixtures/*
-public/system
 *~
 mkmf.log
 text/*
