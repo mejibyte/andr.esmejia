@@ -1,3 +1,3 @@
 class Admin::UploadsController < Admin::BaseController
-  active_scaffold :uploads
+  #active_scaffold :uploads
 end

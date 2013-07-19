@@ -1,3 +1,3 @@
 class Admin::CommentsController < Admin::BaseController
-   active_scaffold :comments
+   #active_scaffold :comments
 end
