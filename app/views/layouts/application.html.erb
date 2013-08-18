@@ -8,20 +8,22 @@
     <%= yield(:head) %>
     <%= render :partial => "shared/math_jax" %>
     <%= render :partial => "shared/google_analytics" %>
+
+    <meta name="google-site-verification" content="kf_tOdxVlxESVr24OWcR3EvDFDzH7XpTAV-z6FfsUJs" />
   </head>
   <body>
     <%= render :partial => "shared/header" %>
-    
-    
+
+
     <div id="container">
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>
-      
-      
+
+
       <%= yield %>
     </div>
-    
+
     <%= render :partial => "shared/footer" %>
   </body>
 </html>
