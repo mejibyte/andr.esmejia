@@ -7,7 +7,15 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user_session, :current_user, :logged_in?
 
+  before_filter :force_domain
+
   private
+
+  def force_domain
+    if Rails.env.production? && request.host != "andr.esmejia.com"
+      redirect_to request.url.sub(request.host, "andr.esmejia.com"), status: :moved_permanently
+    end
+  end
 
   def current_user
     @current_user ||= User.find_by_id(session[:user_id])
