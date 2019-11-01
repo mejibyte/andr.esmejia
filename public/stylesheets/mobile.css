@@ -1,0 +1,28 @@
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  body {
+    width: 100%;
+  }
+
+ div#content p, footer, a.footnote {
+    font-size: 32px; important!;
+    line-height: 1.5em;
+  }
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  body {
+    width: 100%;
+  }
+
+  div#content p, footer, a.footnote {
+    -webkit-text-size-adjust: 100%;
+  }
+
+}

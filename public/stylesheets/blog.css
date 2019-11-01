@@ -1,0 +1,117 @@
+body {
+  padding-top: 30px;
+  font-family: "Droid Serif", Georgia, serif;
+  border-top: 5px solid #2b71e2;
+  color: #404040;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+strong {
+  font-weight: bold;
+}
+
+footer {
+  border-top: 1px solid #eee;
+}
+
+p {
+  font-size: 20px;
+  line-height: 26px;
+  margin: 1em 0;
+}
+
+div#content {
+  width: 720px;
+  margin: 0 auto;
+}
+
+p code { font-size: 18px; }
+
+ul.posts {
+  margin: 0;
+  font-size: 22px;
+}
+
+ul.posts li {
+  margin-bottom: 15px;
+}
+
+.pink {
+  color: #FF0066;
+}
+
+a.pink:hover {
+  color: #e92f5d;
+  text-decoration: underline;
+}
+
+article p {
+  vertical-align: middle;
+}
+
+article ul {
+  list-style: disc;
+  margin-left: 1em;
+}
+
+article ul li {
+  font-size: 12px;
+  line-height: 27px;
+  color: #404040;
+}
+
+article ul li a {
+  font-size: 22px;
+}
+
+ul.projects li {
+  font-size: 18px !important;
+  line-height: 27px;
+  color: #404040;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+ul.projects a {
+  font-size: 18px !important;
+}
+
+footer p {
+  font-size: 16px;
+}
+
+footer a {
+  color: #FF0066;
+}
+
+.footnotes {
+  color: #404040;
+  font-size: 16px;
+  margin-left: -3px;
+}
+
+.footnotes a {
+  margin-left: 3px;
+  padding-right: 5px;
+}
+
+.footnote {
+  vertical-align: middle;
+  font-size: 14px;
+  color: #ff0066;
+}
+
+.footnote:hover {
+  color: #ff0066;
+}
+
+span.date {
+  color: #999;
+}
+
+em {
+  font-style: italic;
+}
