@@ -32,7 +32,7 @@ void convert(long long millis) {
   // Not very clear how it behaves, but it seems to have the same behavior as
   // doing a static_cast<int>(double). That is: behaves like floor for positive values
   // and like ceil for negative values.
-  // My advise is to NEVER use this, and use floor, ceil or round explicitly. It
+  // My advice is to NEVER use this, and use floor, ceil or round explicitly. It
   // is a lot clearer and makes you think better about your code!
   std::chrono::seconds s_cast = std::chrono::duration_cast<std::chrono::seconds>(ms);
 
