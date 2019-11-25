@@ -25,13 +25,13 @@ int main() {
   // std::chrono::seconds secs = durationSinceEpoch;
 
   // This compiles just fine because I'm using a well defined conversion fuction
-  // (round, floor, ceil) to decide what data to throw away.
+  // (round) to decide what data to throw away.
   std::chrono::microseconds micros =
       std::chrono::round<std::chrono::microseconds>(durationSinceEpoch);
   std::chrono::seconds secs =
-      std::chrono::floor<std::chrono::seconds>(durationSinceEpoch);
+      std::chrono::round<std::chrono::seconds>(durationSinceEpoch);
   std::chrono::minutes mins =
-      std::chrono::ceil<std::chrono::minutes>(durationSinceEpoch);
+      std::chrono::round<std::chrono::minutes>(durationSinceEpoch);
   std::chrono::hours hours =
       std::chrono::round<std::chrono::hours>(durationSinceEpoch);
 
